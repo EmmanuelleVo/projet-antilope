@@ -1,0 +1,165 @@
+.sro {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.all { /*a sur toute l'img ou svg*/
+  @include absolute-position();
+}
+
+html {
+  font-size: 18px;
+  margin: 0;
+}
+
+body {
+  //@include text-body;
+  scroll-behavior: smooth;
+  color: $dark_color;
+  line-height: 1.2;
+}
+.layout {
+  //padding-top: rem(130); //80 + 50
+}
+
+.empty {
+
+}
+
+h1 {
+  @include section-title;
+}
+
+.page__title {
+  @include global-spacing;
+  background-color: $dark-color;
+  color: $white_color;
+  height: 50px;
+  text-align: center;
+}
+
+h2 {
+  //font-size: rem($h2);
+  @include section-title;
+}
+
+h3 {
+  @include normal-title;
+}
+
+a {
+  color: $dark_color;
+  text-decoration: none;
+}
+
+.button {
+  @include button();
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+
+
+h1, h2, h3, h4, a, p, input, label, dd, dt, span {
+  color: $dark_color;
+}
+
+a, p, input, input, dd, dt, span, textarea, li {
+  @include normal;
+}
+p {
+  line-height: 1.5;
+}
+label {
+  @include medium;
+}
+
+.margin {
+  @include global-spacing;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.index__none {
+  display: none;
+}
+:hover {
+  transition: .2s ease-in;
+}
+.external--link {
+  transform: translate(5px, -10px);
+}
+.partners__item {
+  .partners__link {
+    opacity: 1;
+    &:hover, &:focus {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  iframe {
+    width: 100%;
+  }
+}
+
+/*background-color: #333;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    right: 0.5em;
+    margin-left: -50%;*/
+
+.section_title--decoration {
+  position: relative;
+  &:before {
+    @include line-decoration()
+  }
+}
+.section_title--decoration-105 {
+  position: relative;
+  &:before {
+    @include line-decoration(105)
+  }
+}
+.section_title--decoration-103 {
+  position: relative;
+  &:before {
+    @include line-decoration(103)
+  }
+}
+
+
+
+@media (min-width: 1200px) {
+  .big-screen {
+    margin: 0 auto;
+    max-width: 1199px;
+  }
+}
+
+.hidden {
+  transition: ease-in-out .5s;
+  opacity: 0;
+  transform: translateY(2em);
+}
+
+.show {
+  opacity: 1;
+  transform: none;
+}

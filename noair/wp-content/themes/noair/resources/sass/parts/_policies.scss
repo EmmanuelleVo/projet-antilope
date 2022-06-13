@@ -1,0 +1,23 @@
+.policies {
+  padding-top: rem(80);
+  .policies__title {
+    padding-top: rem(50);
+  }
+  .policies__wrapper {
+    @include global-spacing;
+  }
+  h2 {
+    margin: rem($vertical_align_20) 0;
+  }
+  .policies__content {
+    margin-bottom: rem($vertical_align_50);
+  }
+}
+
+@media (min-width: 1200px) {
+  .policies {
+    .big-screen {
+      max-width: 789px;
+    }
+  }
+}

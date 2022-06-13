@@ -1,0 +1,158 @@
+.about {
+  padding-top: rem(80);
+
+  &__title {
+    margin-bottom: rem($vertical_align_50);
+    padding-top: rem(50);
+  }
+
+  .noair {
+    &__container {
+    }
+
+    &__title {
+      margin-bottom: rem($vertical_align_20);
+    }
+
+    &__content {
+      line-height: 1.5;
+      @include text-body;
+      margin-bottom: 1.5rem;
+    }
+
+    &__button {
+      //margin: 2rem 0;
+    }
+
+    &__fig {
+      img {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  &__partners {
+    margin-bottom: rem($vertical_align_30);
+
+    .partners__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .partners__item + .partners__item {
+      margin-left: 1rem;
+      margin-top: 0;
+    }
+
+    .partner__fig {
+      margin: 0 auto rem($vertical_align_20);
+      min-width: rem(60);
+      max-width: rem(200);
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .index__none {
+      display: unset;
+    }
+
+
+    .partner__content {
+      margin: rem($vertical_align_20) 0;
+    }
+
+    .partner--link {
+      margin: rem($vertical_align_20/2) 0;
+
+      a {
+        opacity: 1;
+
+        &:hover, &:focus {
+          opacity: 0.8;
+
+          svg {
+            opacity: 0.8;
+          }
+        }
+      }
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__container {
+    //@include global-spacing;
+    padding: 0 24px;
+    display: grid;
+    grid-gap: rem($vertical_align_30);
+    margin-bottom: rem($vertical_align_30);
+
+    &__img {
+
+    }
+
+    &__bio {
+      .bio__container {
+      }
+    }
+
+    .bio__content {
+      margin: rem($vertical_align_20) 0;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    .partners__wrapper {
+      display: unset;
+    }
+  }
+}
+
+
+@media (min-width: 769px) {
+  .about {
+    &__container {
+      grid-template-columns: 5fr 7fr;
+    }
+
+    &__fig {
+      grid-row: 1/-1;
+    }
+
+    .about__competences.competences {
+      grid-column: 2 / -1;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .about {
+    .about__noair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+
+      img {
+        margin: unset;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .about {
+    overflow: hidden;
+  }
+}
+
